@@ -52,8 +52,8 @@ print(area)
 <summary> Solution 2.0 </summary>
 
 ```
-a = 1234
-b = 5423
+a = 12345
+b = 54233
 
 if a > b:
     print("a is greater than b")
