@@ -497,3 +497,136 @@ for num in range(1, n + 1):
 ```
 
 </details>
+
+
+## Exercise 12:
+### Take all the letters of a given string and split each character into a list.
+
+<details>
+
+<summary> Solution 12 </summary>
+
+```
+
+str = "Hello world"
+
+new_str = [letter for letter in str if letter.isalpha()]
+print(new_str)
+
+```
+</details>
+
+## Exercise 13:
+### Given the following list of numbers, remove all occurrences of item 20
+### ` list1 = [5, 20, 15, 20, 25, 50, 20]​ `
+
+<details>
+
+<summary> Solution 13 </summary>
+
+```
+
+list1 = [5, 20, 15, 20, 25, 50, 20]
+
+new_list = [ x for x in list1 if x != 20]
+print(new_list)
+
+```
+</details>
+
+## Exercise 14:
+### Given a dictionary, calculate the sum of all items.
+
+<details>
+
+<summary> Solution 14 </summary>
+
+```
+
+my_dict = {"a": 10, "b": 15, "c": 23, "d": 32}
+
+total_sum = sum(my_dict.values())
+print("Total sum is:", total_sum)
+
+```
+
+</details>
+
+## Exercise 15: 
+## Rock paper scissors.​
+
+### Write a program that plays the game of rock, paper, scissors.​
+
+### Input example:​
+
+### Choose between ‘rock’, ‘paper’, ‘scissors’​
+
+### Output example:​
+
+### Player choice: rock​
+
+### Computer choice: paper​
+
+### Computer wins!​
+
+### Requirements:​
+
+### The program must ensure the user only insert accepted values. If a wrong value is inserted, a message should be returned and the user should be asked to insert a value again.​
+
+### The computer must choose rock, paper or scissors randomly. Hint: check the random library.
+
+
+<details>
+
+<summary> Solution 15 </summary>
+
+```
+
+import random
+
+computer = ["rock", "paper", "scissors"]
+computer_choice = random.choice(computer)
+
+
+while True:
+    try:
+        human_choice = str(input("Chose one: 'rock', 'paper' or 'scissors': "))
+        if human_choice == 'rock' or human_choice == 'paper' or human_choice == 'scissors':
+            break
+        else:
+            print("Please select from the following: 'rock', 'paper' or 'scissors' ")
+    except ValueError:
+        print("Please pick a valid choice.")
+
+if human_choice == "rock" and computer_choice == "rock":
+    print("It's a draw, try again!")
+    print(f"The computer chose '{computer_choice}'")
+elif human_choice == "rock" and computer_choice == "paper":
+    print("The computer won!")
+    print(f"The computer chose '{computer_choice}'")
+elif human_choice == "rock" and computer_choice == "scissors":
+    print("You won!!!")
+    print(f"The computer chose '{computer_choice}'")
+elif human_choice == "paper" and computer_choice == "paper":
+    print("It's a draw, try again!")
+    print(f"The computer chose '{computer_choice}'")
+elif human_choice == "paper" and computer_choice == "rock":
+    print("You won!!!")
+    print(f"The computer chose '{computer_choice}'")
+elif human_choice == "paper" and computer_choice == "scissors":
+    print("The computer won!")
+    print(f"The computer chose '{computer_choice}'")
+elif human_choice == "scissors" and computer_choice == "scissors":
+    print("It's a draw, try again!")
+    print(f"The computer chose '{computer_choice}'")
+elif human_choice == "scissors" and computer_choice == "rock":
+    print("The computer won!")
+    print(f"The computer chose '{computer_choice}'")
+else:
+    print(f"You won!!!")
+    print(f"The computer chose '{computer_choice}'")
+
+
+```
+
+</details>
