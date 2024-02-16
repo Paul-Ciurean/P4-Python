@@ -590,7 +590,7 @@ computer_choice = random.choice(computer)
 
 while True:
     try:
-        human_choice = str(input("Chose one: 'rock', 'paper' or 'scissors': "))
+        human_choice = str(input("Chose from the following: 'rock', 'paper' or 'scissors': "))
         if human_choice == 'rock' or human_choice == 'paper' or human_choice == 'scissors':
             break
         else:
